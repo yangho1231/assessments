@@ -81,6 +81,7 @@ const logs2 = [
     ["1201", "user_1", "resource_3"],
     ["1202", "user_1", "resource_3"]
 ];
+//First method
 function logSorter(logs) {
   var obj = { };
   for (let i =0; i < logs.length; i++) {
@@ -106,3 +107,31 @@ function logSorter(logs) {
 }
 logSorter(logs2)
 console.log(logSorter(logs2));
+//Second Method
+// function logSorter(logs1) {
+//     let obj = {};
+//     logs1.forEach((x, index) => {
+//       if (!obj[logs1[index][1]]) {
+//         obj[logs1[index][1]] = [];
+//       }
+//       obj[logs1[index][1]].push(logs1[index][0])
+//     });
+//     sortArrayValue(obj)
+//     return obj
+//   }
+//   logSorter(logs2)
+//   function sortArrayValue(obj) {
+//     for(let key in obj) {
+//       let newArray = [];
+//       if(obj[key].length === 1) {
+//         newArray.push(obj[key][0], obj[key][0]);
+//         obj[key] = newArray;
+//       } else {
+//         obj[key].sort((a, b) => {
+//           return a - b;
+//         })
+//         newArray.push(obj[key][0], obj[key][obj[key].length - 1])
+//         obj[key] = newArray
+//       }
+//     }
+//   }
